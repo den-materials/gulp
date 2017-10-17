@@ -236,6 +236,7 @@ module.exports = Person
 
 <!--11:16 turning over to devs WDI4-->
 <!--11:21 WDI4 coming back -->
+<!--WDI5 10:31 -->
 
 Create an empty `app.js` file in your `src` directory and save it. Then run `gulp` in your project's root. Finally, copy the code above into `app.js`. What happened?
 
@@ -253,6 +254,7 @@ Create an empty `app.js` file in your `src` directory and save it. Then run `gul
 Exciting stuff! Here's a quick look at some of the [new ES6 syntax](https://github.com/lukehoban/es6features). Take a moment to review it and then try out this [online quiz](http://tutorialzine.com/2015/11/think-you-know-es6-prove-it/) (open book is fine). It will introduce you to some new ES6 concepts. Feel free to jot down anything that's surprising and we'll discuss it. Feel free to try any of this fancy ES6 stuff out in your `src/app.js` file.
 
 <!--12:25 5 minutes -->
+<!--WDI5 10:58  after quiz -->
 
 ## Additional Notes
 
