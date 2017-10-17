@@ -5,12 +5,11 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--We need to make sure this comes after Sass in the future -->
-
 <!--11:20 actually-->
 
 <!--10:32 WDI4 -->
 <!--11:06 WDI3 -->
+<!--WDI5 9:41 -->
 <!-- 11:10 5 minutes -->
 
 <!--Hook: So we just talked about Sass and how it can make our lives easier.  We also know that ES6 can make our JS applications more modern.  We also know about minification which can speed up our web applications.  But every time we try to convert Sass to CSS, ES6 to ES5, or big JS files to minified JS files, we have to copy our code into a converter somewhere.  How annoying!  With Gulp, we can get that done automatically, every time we change one of our files. -->
@@ -66,6 +65,8 @@ Gulp is a useful tool for automating tasks in order to increase productivity. To
 No gulpfile found
 ```
 
+<!--WDI5 9:48  -->
+
 Oops, we ran into an error. Gulp requires that we store our tasks in a `gulpfile.js`. This should be in the same directory as your `package.json`. Make that file then run Gulp again.
 
 ```bash
@@ -114,6 +115,7 @@ I am the default task. Hear me roar
 Finished 'default' after 144 μs
 ```
 
+<!--WDI5 9:54  -->
 <!--WDI4 10:43 turning over to devs -->
 <!--11:38 -->
 
@@ -151,6 +153,7 @@ Run `gulp styles` and it will find your `.scss` file and output a corresponding 
 
 Lastly let's add the task we just created to gulp's `default` task and have it run the task upon file changes by watching the file. Now every time you save, your `.scss` will trigger the `styles` gulp task and compile the changes for you!
 
+<!--WDI5 10:08  -->
 <!--11:32 when turning over to devs -->
 <!--11:00 WDI4 coming back -->
 
@@ -164,6 +167,7 @@ gulp.task('default',function() {
 
 Now we can run our Sass compilation with just `gulp`.
 
+<!--WDI5 10:15  -->
 <!--WDI4 11:03 turning over to devs -->
 <!--WDI4 11:07 coming back -->
 <!--12:00 15 minutes -->
@@ -177,7 +181,7 @@ Require all the modules we'll be using.
 <!--12:15-->
 
 ```bash
-npm install --save-dev gulp-babel babel-preset-es2015
+npm install --save-dev gulp-babel babel-preset-es2015 babel-core
 ```
 
 Inside `gulpfile.js`, do something similar to what we did to transpile our sass. Instead now we'll be using `gulp-babel` to help us transpile our ES6 to ES5.
@@ -195,7 +199,7 @@ gulp.task('scripts', function () {
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('default',function() {
