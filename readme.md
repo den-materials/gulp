@@ -100,7 +100,7 @@ In our `gulpfile.js` we need to include the `gulp` module. To do this, we should
 After declaring our `gulp` variable, we should create our first task. This will require us to call upon Gulp to define a task. We must also have a name for our task. By *default*, Gulp requires a `default` task. It is the first task that Gulp will look for when reading your `gulpfile.js`. Let's define our first (default) task:
 
 ```javascript
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 //define a task with the name of 'default'
 // and a callback to perform when the task is ran
@@ -137,8 +137,8 @@ Then we can require it in our `gulpfile.js`.
 
 ```js
 //gulpfile.js
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 ```
 
 Define a `styles` task that looks in a `/sass` directory for all `.scss` files, logs any errors that occur, and then compiles the result into a `/css` directory.
@@ -147,7 +147,7 @@ Define a `styles` task that looks in a `/sass` directory for all `.scss` files, 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('css'));
 });
 ```
 Create a `/sass` directory and `touch` a `main.scss` file inside.
@@ -155,6 +155,10 @@ Create a `/sass` directory and `touch` a `main.scss` file inside.
 Run `gulp styles` and it will find your `.scss` file and output a corresponding `.css` file for you.
 
 Lastly let's add the task we just created to gulp's `default` task and have it run the task upon file changes by watching the file. Now every time you save, your `.scss` will trigger the `styles` gulp task and compile the changes for you!
+
+<!-- Note: if you see an error complaining `Error: ENOENT: no such file or directory` for `node-sass` or similar, 
+ fix : npm rebuild node-sass (or whatever other package)
+-->
 
 <!--WDI6 2:08 -->
 <!--WDI5 10:08  -->
@@ -208,6 +212,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('default',function() {
+    gulp.watch('sass/**/*.scss',['styles']);
     gulp.watch('src/**/*.js',['scripts']);
 });
 ```
@@ -222,7 +227,7 @@ Let's try out some ES6. Below find some working ES6 code, take a moment to look 
 
 ```js
 // define an ES6 class called Person
-class Person {
+export class Person {
   // define the method to run for each instantiation
   constructor(name, age, type="person") {
     this.name = name
@@ -234,9 +239,6 @@ class Person {
     return `Hi I'm ${this.name}!`
   }
 }
-
-// export the Person class
-module.exports = Person
 ```
 
 <!--11:16 turning over to devs WDI4-->
