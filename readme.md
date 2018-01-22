@@ -5,6 +5,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI6 1:34  -->
 <!--11:20 actually-->
 
 <!--10:32 WDI4 -->
@@ -65,6 +66,7 @@ Gulp is a useful tool for automating tasks in order to increase productivity. To
 No gulpfile found
 ```
 
+<!--WDI6 1:44  -->
 <!--WDI5 9:48  -->
 
 Oops, we ran into an error. Gulp requires that we store our tasks in a `gulpfile.js`. This should be in the same directory as your `package.json`. Make that file then run Gulp again.
@@ -119,6 +121,7 @@ Finished 'default' after 144 μs
 <!--WDI4 10:43 turning over to devs -->
 <!--11:38 -->
 
+<!--WDI6 1:54  -->
 <!--11:24  WDI3 -->
 <!--11:45 15 minutes -->
 
@@ -153,6 +156,7 @@ Run `gulp styles` and it will find your `.scss` file and output a corresponding 
 
 Lastly let's add the task we just created to gulp's `default` task and have it run the task upon file changes by watching the file. Now every time you save, your `.scss` will trigger the `styles` gulp task and compile the changes for you!
 
+<!--WDI6 2:08 -->
 <!--WDI5 10:08  -->
 <!--11:32 when turning over to devs -->
 <!--11:00 WDI4 coming back -->
@@ -167,6 +171,7 @@ gulp.task('default',function() {
 
 Now we can run our Sass compilation with just `gulp`.
 
+<!--WDI6 2:18  -->
 <!--WDI5 10:15  -->
 <!--WDI4 11:03 turning over to devs -->
 <!--WDI4 11:07 coming back -->
@@ -249,12 +254,15 @@ Create an empty `app.js` file in your `src` directory and save it. Then run `gul
 
 <!--At 12:14 in WDI3 ran through "Additional Notes" then let them work through ES6 quiz for rest of class -->
 
+<!--WDI6 2:36 -->
+
 ## More ES6
 
 Exciting stuff! Here's a quick look at some of the [new ES6 syntax](https://github.com/lukehoban/es6features). Take a moment to review it and then try out this [online quiz](http://tutorialzine.com/2015/11/think-you-know-es6-prove-it/) (open book is fine). It will introduce you to some new ES6 concepts. Feel free to jot down anything that's surprising and we'll discuss it. Feel free to try any of this fancy ES6 stuff out in your `src/app.js` file.
 
 <!--12:25 5 minutes -->
 <!--WDI5 10:58  after quiz -->
+<!--WDI6 2:51 -->
 
 ## Additional Notes
 
